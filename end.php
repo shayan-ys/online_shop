@@ -1,8 +1,8 @@
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/toggle.js"></script>
-<script type="text/javascript" src="assets/js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.hoverIntent.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.cyber.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/toggle.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/jquery.cyber.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#owl-demo-slider").owlCarousel({
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<script type="text/javascript" src="assets/js/popModal.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/popModal.js"></script>
 <script type="text/javascript">
 $('#popModal_ex1').click(function(){
 	$('#popModal_ex1').popModal({
@@ -62,10 +62,10 @@ $(function() {
 	});
 });
 </script>
-<script type="text/javascript" src="assets/js/dkslider.js"></script>
-<script type="text/javascript" src="assets/js/dkscroller.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/dkslider.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/dkscroller.js"></script>
 <!-- <script type="text/javascript" src="assets/js/lib.js"></script> -->
 <!-- <script type="text/javascript" src="assets/js/run.js"></script> -->
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/main.js"></script>
 </body>
 </html>

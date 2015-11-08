@@ -1,4 +1,4 @@
-<?php $path_to_root = "../" ?>
+<?php $path_to_root = "../"; ?>
 <?php require $path_to_root.'begin.php'; ?>
 <?php include $path_to_root.'header.php'; ?>
 
