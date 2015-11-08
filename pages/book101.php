@@ -519,5 +519,6 @@ $(function() {
 });
 </script>
 
+<?php include $path_to_root.'product_libs.php'; ?>
 		<?php include $path_to_root.'footer.php'; ?>
 		<?php require $path_to_root.'end.php'; ?>

@@ -23,7 +23,7 @@ $title = "ثبت نام";
 			<div class="col-xs-12">
 				<div class="row">
 					<div class="title-page">
-						<h2>ثبت نام</h2>
+						<h2>ثبت محصول</h2>
 						<div class="btp"></div>
 					</div>
 				</div>
@@ -35,18 +35,36 @@ $title = "ثبت نام";
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-sm-offset-2 col-md-offset-3 col-lg-offset-4">
-				<div class="box">
+				Add new book
 					<form class="form-horizontal">
 					  <div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">Product_Name</label>
+					    <label for="name" class="col-sm-2 control-label">نام محصول</label>
 					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					      <input type="text" class="form-control" id="name" placeholder="نام محصول را اینجا وارد کنید">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+					    <label for="inputPassword3" class="col-sm-2 control-label">قیمت</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					      <input type="number" class="form-control" id="inputPassword3" placeholder="قیمت فی">
+					    </div>
+					  </div>
+						<div class="form-group">
+					    <label for="num" class="col-sm-2 control-label">تعداد</label>
+					    <div class="col-sm-10">
+					      <input type="number" class="form-control" id="num" placeholder="تعداد موجودی فعلی">
+					    </div>
+					  </div>
+						<div class="form-group">
+					    <label for="num" class="col-sm-2 control-label">تعداد</label>
+					    <div class="col-sm-10">
+					      <input type="number" class="form-control" id="num" placeholder="تعداد موجودی فعلی">
+					    </div>
+					  </div>
+						<div class="form-group">
+					    <label for="num" class="col-sm-2 control-label">تعداد</label>
+					    <div class="col-sm-10">
+					      <input type="number" class="form-control" id="num" placeholder="تعداد موجودی فعلی">
 					    </div>
 					  </div>
 					  <div class="form-group">
@@ -64,7 +82,6 @@ $title = "ثبت نام";
 					    </div>
 					  </div>
 					</form>
-				</div>
 			</div>
 		</div>
 	</div>
