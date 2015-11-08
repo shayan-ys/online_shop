@@ -52,19 +52,19 @@
                 <ul>
                   <li>
 
-                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">صفحه اصلی</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" >صفحه اصلی</a>
                   </li>
                   <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">تماس با ما</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" >تماس با ما</a>
                   </li>
                   <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">درباره ما</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" >درباره ما</a>
                   </li>
                   <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">اخبار </a>
+                    <a href="<?php echo $path_to_root; ?>index.php" >اخبار </a>
                   </li>
                   <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">قوانین و مقررات</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" >قوانین و مقررات</a>
                   </li>
                 </ul>
               </div>
@@ -100,7 +100,7 @@ background-position: center;
 border-radius: 3px 0 0 3px;
 text-indent:-9999px;
 background-repeat: no-repeat;
-height: 30px;" href="found.php" >جستجو</a>
+height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
             </form>
             <div id="ajax_result25"></div>
           </div>
@@ -218,45 +218,64 @@ height: 30px;" href="found.php" >جستجو</a>
           <div class="collapse navbar-collapse js-navbar-collapse">
             <ul class="nav navbar-nav" style="width:100%;">
               <li class="dropdown mega-dropdown first-menu">
-                <a href="pages/product/cat/22.html#/pagesize-20/brand-33" ajax="ok" class="dropdown-toggle" data-toggle="dropdown">لنوو<span class="dp"></span></a>
+                <a href="pages/product/cat/22.html#/pagesize-20/brand-33"  class="dropdown-toggle" data-toggle="dropdown">لپتاپ<span class="dp"></span></a>
                 <div class="dropdown-menu mega-dropdown-menu row">
                   <ul>
                     <li class="col-xs-12 col-sm-4">
                       <ul>
-                        <li class="dropdown-header"><a href="index.php#" ajax="ok" >بر اساس نوع</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_273" ajax="ok" >نوت بوک (لپ تاپ)</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_274" ajax="ok" >آلترا بوک</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_275" ajax="ok" >نت بوک</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_276" ajax="ok" >کروم بوک</a></li>
+                        <li class="dropdown-header"><a href="<?php echo $path_to_root; ?>index.php"  >بر اساس نوع</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >نوت بوک (لپ تاپ)</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >آلترا بوک</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >نت بوک</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >کروم بوک</a></li>
                       </ul>
                     </li>
                     <li class="col-xs-12 col-sm-4">
                       <ul>
-                        <li class="dropdown-header"><a href="pages/index.php#" ajax="ok" >براساس نوع کاربری</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_277" ajax="ok" >عمومی و خانگی</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_278" ajax="ok" >مخصوص بازی</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_279" ajax="ok" >تبدیل پذیر</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_280" ajax="ok" >با صفحه نمایش لمسی</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_281" ajax="ok" >کاربری صنعتی</a></li>
-                      </ul>
-                    </li>
-                    <li class="col-xs-12 col-sm-4">
-                      <ul>
-                        <li class="dropdown-header"><a href="pages/index.php#" ajax="ok" >بر اساس سری</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-Y%20series" ajax="ok" >سری Y</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-b%20series" ajax="ok" >سری B</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-E%20series" ajax="ok" >سری E</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-Flex%20series" ajax="ok" >سری Flex</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-G%20series" ajax="ok" >سری G</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-s%20series" ajax="ok" >سری S</a></li>
-                        <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-z%20series" ajax="ok" >سری Z</a></li>
+                        <li class="dropdown-header"><a href="<?php echo $path_to_root; ?>index.php"  >براساس نوع کاربری</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >عمومی و خانگی</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >مخصوص بازی</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >تبدیل پذیر</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >با صفحه نمایش لمسی</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >کاربری صنعتی</a></li>
                       </ul>
                     </li>
                   </ul>
                   <div class="img-menu" style="height: 335px;">
                     <div class="wall">
-                      <a href="pages/product/cat/22.html#/pagesize-20/brand-33" target="_blank">
-                        <img src="upload/thumb1/menu/1425734088.jpg" alt="لنوو" title="لنوو" width="400" height="335" />
+                      <a href="<?php echo $path_to_root; ?>pages/searchPro.php" target="_blank">
+                        <img src="upload/thumb1/menu/1425734088.jpg" alt="لپتاپ" title="لپتاپ" width="400" height="335" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown mega-dropdown first-menu">
+                <a href="pages/product/cat/22.html#/pagesize-20/brand-33"  class="dropdown-toggle" data-toggle="dropdown">کتاب<span class="dp"></span></a>
+                <div class="dropdown-menu mega-dropdown-menu row">
+                  <ul>
+                    <li class="col-xs-12 col-sm-4">
+                      <ul>
+                        <li class="dropdown-header"><a href="<?php echo $path_to_root; ?>index.php"  >بر اساس نوع</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >رمان</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >داستان کوتاه</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >ماجرایی</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >فکاهی</a></li>
+                      </ul>
+                    </li>
+                    <li class="col-xs-12 col-sm-4">
+                      <ul>
+                        <li class="dropdown-header"><a href="<?php echo $path_to_root; ?>index.php"  >براساس نوع مخاطب</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >عمومی</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >مخصوص کودک</a></li>
+                        <li><a href="<?php echo $path_to_root; ?>pages/searchPro.php"  >زنان</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="img-menu" style="height: 335px;">
+                    <div class="wall">
+                      <a href="<?php echo $path_to_root; ?>pages/searchPro.php" target="_blank">
+                        <img src="http://www.ofoqco.com/images/books/344680.jpg" alt="کتاب" title="کتاب" width="400" height="335" />
                       </a>
                     </div>
                   </div>
