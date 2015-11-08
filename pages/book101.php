@@ -86,13 +86,13 @@
 
                                             <div class="item">
 
-                                                <img class="oxe" src="http://shayanys.com/upload/thumb1/product/1443963051.jpg" width="350" height="350" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
+                                                <img class="oxe" src="http://www.ofoqco.com/images/books/344680.jpg" width="350" height="350" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
 
                                             </div>
 
 
 
-                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963698.jpg" width="350" height="350" alt="7" title="7" />
+                                            <img class="oxe" src="http://www.ofoqco.com/images/books/344680.jpg" width="350" height="350" alt="7" title="7" />
 
 
 
@@ -130,8 +130,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://shayanys.com/upload/product/1443963051.jpg"></a>
-                                                            <img src="http://shayanys.com/upload/thumb4/product/1443963051.jpg" width="70" height="70" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
+                                                            <a href="http://www.ofoqco.com/images/books/344680.jpg"></a>
+                                                            <img src="http://www.ofoqco.com/images/books/344680.jpg" width="70" height="70" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
                                                         </li>
 
                                                 </div>
@@ -143,8 +143,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://shayanys.com/upload/product_tab/1443963698.jpg"></a>
-                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963698.jpg" width="70" height="70" alt="7" title="7" />
+                                                            <a href="http://www.ofoqco.com/images/books/344680.jpg"></a>
+                                                            <img src="http://www.ofoqco.com/images/books/344680.jpg" width="70" height="70" alt="7" title="7" />
                                                         </li>
 
                                                 </div>
@@ -499,25 +499,7 @@
         </div>
     </div>
 </section>
-<script>
-$(function() {
-    $(".add-cart").unbind("click").click(function() {
-        var num = $("#number").val();
-				var name = $(".pd h3 small").text();
-				var img_url = $("#sync1 img:first-child").attr("src");
-				var product_id = $(".product_info1_right_code").text();
-				addToBasket({
-					id: '506',
-					pid: product_id,
-					num: num,
-					img_url: img_url,
-					name: name,
-					price: price
-				});
-				return false;
-    });
-});
-</script>
+
 
 <?php include $path_to_root.'product_libs.php'; ?>
 		<?php include $path_to_root.'footer.php'; ?>
