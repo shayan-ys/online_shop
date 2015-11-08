@@ -79,7 +79,7 @@
               <div class="fine">جمع کل خرید شما :<span class='amount' >۰</span><span>تومان</span>
               </div>
               <div class="ok">
-                <a title="تسویه حساب" href="pages/factor.php">تسویه حساب</a>
+                <a title="تسویه حساب" href="<?php echo $path_to_root; ?>pages/factor.php">تسویه حساب</a>
               </div>
             </div>
           </div>
