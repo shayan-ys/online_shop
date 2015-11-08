@@ -25,33 +25,33 @@ if(!isset($title) || strlen($title)<1) $title="صفحه اصلی";
 			</script>
 
 			<!-- start template css -->
-			<link rel="stylesheet" type="text/css" href="assets/css/cyber.css" />
-			<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
-			<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
-			<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css" />
-			<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css" />
-			<link rel="stylesheet" type="text/css" href="assets/css/popModal.css">
-			<link rel="stylesheet" type="text/css" href="assets/css/lightbox.css">
-			<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-			<link rel="stylesheet" type="text/css" href="assets/js/plugin/raty/jquery.raty.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/cyber.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/responsive.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/bootstrap.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/owl.carousel.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/owl.theme.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/popModal.css">
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/lightbox.css">
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/css/style.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $path_to_root; ?>assets/js/plugin/raty/jquery.raty.css" />
 
-			<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-			<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/jquery.min.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/owl.carousel.min.js"></script>
 
 			<!-- start our js -->
-			<script type="text/javascript" src="assets/js/lang/fa.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/lang/fa.js"></script>
 			<!-- <script type="text/javascript" src="assets/js/jquery.ham3dform.js"></script> -->
-			<script type="text/javascript" src="assets/js/jquery.ham3dModalbox.js"></script>
-			<script type="text/javascript" src="assets/js/sonic.js"></script>
-			<script type="text/javascript" src="assets/js/main2.js"></script>
-			<script type="text/javascript" src="assets/js/lib2.js"></script>
-			<script type="text/javascript" src="assets/js/basket2.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/jquery.ham3dModalbox.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/sonic.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/main2.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/lib2.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/basket2.js"></script>
 			<!-- <script type="text/javascript" src="assets/js/compare.js"></script> -->
-			<script type="text/javascript" src="assets/js/scriptoffer.js"></script>
+			<script type="text/javascript" src="<?php echo $path_to_root; ?>assets/js/scriptoffer.js"></script>
 			<!-- end our js -->
 
-			<script src="assets/js/plugin/raty/jquery.raty.js"></script>
-			<script src="assets/js/plugin/raty/javascripts/labs.js" type="text/javascript"></script>
+			<script src="<?php echo $path_to_root; ?>assets/js/plugin/raty/jquery.raty.js"></script>
+			<script src="<?php echo $path_to_root; ?>assets/js/plugin/raty/javascripts/labs.js" type="text/javascript"></script>
 			</head>
 
 			<body>

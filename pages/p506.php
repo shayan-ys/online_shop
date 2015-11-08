@@ -1,5 +1,6 @@
-<?php require 'begin.php'; ?>
-<?php include 'header.php'; ?>
+<?php $path_to_root = "../" ?>
+<?php require $path_to_root.'begin.php'; ?>
+<?php include $path_to_root.'header.php'; ?>
 <script>
 	var price = '2875000';
 	$(document).ready(function(){
@@ -1367,5 +1368,5 @@ $(function() {
 });
 </script>
 
-		<?php include 'footer.php'; ?>
-		<?php require 'end.php'; ?>
+		<?php include $path_to_root.'footer.php'; ?>
+		<?php require $path_to_root.'end.php'; ?>
