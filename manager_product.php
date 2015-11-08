@@ -35,7 +35,6 @@ $title = "ثبت نام";
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-sm-offset-2 col-md-offset-3 col-lg-offset-4">
-				Add new book
 					<form class="form-horizontal">
 					  <div class="form-group">
 					    <label for="name" class="col-sm-2 control-label">نام محصول</label>
@@ -56,35 +55,79 @@ $title = "ثبت نام";
 					    </div>
 					  </div>
 						<div class="form-group">
-					    <label for="num" class="col-sm-2 control-label">تعداد</label>
+					    <label for="num" class="col-sm-2 control-label">+</label>
 					    <div class="col-sm-10">
-					      <input type="number" class="form-control" id="num" placeholder="تعداد موجودی فعلی">
+					      <a class="btn btn-primary" onclick="addAttr(this);">افزودن ویژگی انتخابی</a>
 					    </div>
+					  </div>
+						<div id="attrs_fields">
+						</div>
+						<div class="form-group">
+					    <label for="pic" class="col-sm-2 control-label">عکس</label>
+					      <input type="file" id="pic" placeholder="عکس">
 					  </div>
 						<div class="form-group">
-					    <label for="num" class="col-sm-2 control-label">تعداد</label>
+					    <label for="num" class="col-sm-2 control-label">+</label>
 					    <div class="col-sm-10">
-					      <input type="number" class="form-control" id="num" placeholder="تعداد موجودی فعلی">
+					      <a class="btn btn-warning" onclick="addPic(this);">افزودن عکس</a>
 					    </div>
 					  </div>
+						<div id="img_fields">
+						</div>
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-10">
-					      <div class="checkbox">
-					        <label>
-					          <input type="checkbox"> Remember me
-					        </label>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
-					      <button type="submit" class="btn btn-default">Sign in</button>
+								<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  ثبت محصول
+</button>
 					    </div>
 					  </div>
 					</form>
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">پیغام مدیریت</h4>
+      </div>
+      <div class="modal-body">
+        محصول با موفقیت افزوده شد
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 </section>
+
+<script>
+	var num =1;
+	var numPic=1;
+	function addAttr(target) {
+		html = '';
+		html += "<div class='form-group'>";
+		html += "<label><input type='text' placeholder='نام ویژگی "+num+"'></label>";
+		html += "<div>";
+		html += "<input type='text' class='form-control' placeholder='مقدار را وارد کنید'>";
+		html += "</div>";
+		html += "</div>";
+		$("#attrs_fields").append(html);
+		num++;
+	}
+	function addPic(target) {
+		html = '';
+		html += "<div class='form-group'>";
+		html += '<label for="pic" class="col-sm-3 control-label">عکس '+ numPic +'</label>';
+		html += '<input type="file" id="pic" placeholder="عکس">';
+		html += "</div>";
+		$("#img_fields").append(html);
+		numPic++;
+	}
+</script>
+
 <?php include 'footer.php'; ?>
 <?php include 'end.php'; ?>
