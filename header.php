@@ -3,8 +3,43 @@
     <div class="row">
       <div class="top">
         <div class="one">
-          <ul>
 
+          <div class="modal fade" id="login_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
+                </div>
+                <div class="modal-body">
+                  کاربرگرامی نگار٫
+                  با موفقیت ورود یافتید.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="logout_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
+                </div>
+                <div class="modal-body">
+                  کاربرگرامی نگار٫
+                  با موفقیت خروج یافتید
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul>
             <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
             <li id="registerOrProfile"><a href="register.php"><i></i>عضویت</a></li>
             <!-- <li id="userOrLogOut"><a class="user-login" onclick="logout();"><i></i>خروج</a></li>
@@ -65,8 +100,17 @@
             $("#userOrLogOut").html(html1);
             html2 = '<a href="register.php"><i></i>عضویت</a>';
             $("#registerOrProfile").html(html2);
+            $("#logout_success").modal('toggle');
           }
-          function login() {
+          function login(target) {
+            if($("#email").val() == 'negar@email.com'
+              && $("#password").val() == '123') {
+                login_show();
+                $(target).closest('.modal').modal('toggle');
+                $("#login_success").modal('toggle');
+              }
+          }
+          function login_show() {
             html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
             $("#userOrLogOut").html(html1);
             html2 = '<a href="pages/profile.php"><i></i>نگار بیاتی</a>';
@@ -139,7 +183,7 @@
           </div>
           <div class="modal-footer">
             <div class="col-xs-12">
-              <a onclick="login();" type="submit" value="ورود" />
+              <a onclick="login(this);" class="btn btn-danger" >ورود</a>
             </div>
             <div class="col-xs-12">
               <a href="pages/forgotpass.html">رمز عبور خود را فراموش کرده اید ؟</a>
