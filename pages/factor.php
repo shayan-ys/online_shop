@@ -61,7 +61,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">خیر</button>
-		        <button type="button" class="btn btn-primary">بله</button>
+		        <button type="button" class="btn btn-primary"><a href="https://sep.shaparak.ir/payment.aspx">بله</a></button>
 		      </div>
 		    </div>
 		  </div>
