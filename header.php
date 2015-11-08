@@ -51,19 +51,20 @@
               <div id="menu">
                 <ul>
                   <li>
-                    <a href="index.php" ajax="ok">صفحه اصلی</a>
+
+                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">صفحه اصلی</a>
                   </li>
                   <li>
-                    <a href="index.php" ajax="ok">تماس با ما</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">تماس با ما</a>
                   </li>
                   <li>
-                    <a href="index.php" ajax="ok">درباره ما</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">درباره ما</a>
                   </li>
                   <li>
-                    <a href="index.php" ajax="ok">اخبار </a>
+                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">اخبار </a>
                   </li>
                   <li>
-                    <a href="index.php" ajax="ok">قوانین و مقررات</a>
+                    <a href="<?php echo $path_to_root; ?>index.php" ajax="ok">قوانین و مقررات</a>
                   </li>
                 </ul>
               </div>
@@ -78,19 +79,28 @@
               <div class="fine">جمع کل خرید شما :<span class='amount' >۰</span><span>تومان</span>
               </div>
               <div class="ok">
-                <a title="تسویه حساب" href="pages/order.html">تسویه حساب</a>
+                <a title="تسویه حساب" href="pages/factor.php">تسویه حساب</a>
               </div>
             </div>
           </div>
         </div>
         <div class="two">
           <div class="logo">
-            <h1><a href="index.html">باراد</a></h1>
+            <h1><a href="<?php echo $path_to_root; ?>index.php">باراد</a></h1>
           </div>
           <div class="search">
-            <form class="not_ajax" id="formsearch" action="pages/product">
+            <form class="" id="formsearch" >
               <input type="text" placeholder="جستجو در کالاها ..." class="search_inp search_inp1" name="search" autocomplete="off" />
-              <input type="submit" value="جستجو..." />
+              <!-- <input type="submit" value="جستجو..." /> -->
+              <a style="float: left;
+width: 7%;
+border:none;
+background:#d00000 url(../img/ico/5.png);
+background-position: center;
+border-radius: 3px 0 0 3px;
+text-indent:-9999px;
+background-repeat: no-repeat;
+height: 30px;" href="found.php" >جستجو</a>
             </form>
             <div id="ajax_result25"></div>
           </div>
@@ -213,7 +223,7 @@
                   <ul>
                     <li class="col-xs-12 col-sm-4">
                       <ul>
-                        <li class="dropdown-header"><a href="index.html#" ajax="ok" >بر اساس نوع</a></li>
+                        <li class="dropdown-header"><a href="index.php#" ajax="ok" >بر اساس نوع</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_273" ajax="ok" >نوت بوک (لپ تاپ)</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_274" ajax="ok" >آلترا بوک</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-3_112_275" ajax="ok" >نت بوک</a></li>
@@ -222,7 +232,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-4">
                       <ul>
-                        <li class="dropdown-header"><a href="pages/index.html#" ajax="ok" >براساس نوع کاربری</a></li>
+                        <li class="dropdown-header"><a href="pages/index.php#" ajax="ok" >براساس نوع کاربری</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_277" ajax="ok" >عمومی و خانگی</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_278" ajax="ok" >مخصوص بازی</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/answer-4_113_279" ajax="ok" >تبدیل پذیر</a></li>
@@ -232,7 +242,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-4">
                       <ul>
-                        <li class="dropdown-header"><a href="pages/index.html#" ajax="ok" >بر اساس سری</a></li>
+                        <li class="dropdown-header"><a href="pages/index.php#" ajax="ok" >بر اساس سری</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-Y%20series" ajax="ok" >سری Y</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-b%20series" ajax="ok" >سری B</a></li>
                         <li><a href="pages/product/cat/22.html#/pagesize-20/brand-33/keyword-E%20series" ajax="ok" >سری E</a></li>
