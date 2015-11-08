@@ -1377,7 +1377,7 @@
 
 						<div class="box lb">
 							<div class="title bo4">
-								<h2>پیشنهاد آترا</h2>
+								<h2>پیشنهاد ما</h2>
 							</div>
 							<div class="slider-product">
 								<div id="owl-demo4">

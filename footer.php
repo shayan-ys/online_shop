@@ -6,13 +6,13 @@
 					<h4>با ما آشنا شوید</h4>
 					<ul class="mf">
 						<li>
-							<a href="pages/contact.html" ajax="ok">ارتباط با ما</a>
+							<a href="" ajax="ok">ارتباط با ما</a>
 						</li>
 						<li>
-							<a href="pages/about.html" ajax="ok">درباره باراد</a>
+							<a href="" ajax="ok">درباره باراد</a>
 						</li>
 						<li>
-							<a href="pages/page/job.html" ajax="ok">فرصت های شغلی</a>
+							<a href="" ajax="ok">فرصت های شغلی</a>
 						</li>
 					</ul>
 				</div>
@@ -20,16 +20,16 @@
 					<h4> راهنمایی نیاز دارید؟</h4>
 					<ul class="mf">
 						<li>
-							<a href="pages/page/guide.html" ajax="ok">راهنمای خرید</a>
+							<a href="" ajax="ok">راهنمای خرید</a>
 						</li>
 						<li>
-							<a href="pages/page/7days.html" ajax="ok">بازگرداندن کالا</a>
+							<a href="" ajax="ok">بازگرداندن کالا</a>
 						</li>
 						<li>
-							<a href="pages/page/Terms-Condition.html" ajax="ok">قوانین و مقررات</a>
+							<a href="" ajax="ok">قوانین و مقررات</a>
 						</li>
 						<li>
-							<a href="pages/page/FAQ.html" ajax="ok">پرسش های متداول</a>
+							<a href="" ajax="ok">پرسش های متداول</a>
 						</li>
 					</ul>
 				</div>
@@ -37,15 +37,15 @@
 					<h4>حساب کاربری</h4>
 					<ul class="mf">
 						<li>
-							<a href="pages/register.html" ajax="ok">ایجاد حساب کاربری جدید</a>
+							<a href="" ajax="ok">ایجاد حساب کاربری جدید</a>
 						</li>
 
 						<li>
-							<a href="pages/login.html" ajax="ok">ورود به سایت</a>
+							<a href="" ajax="ok">ورود به سایت</a>
 						</li>
 
 						<li>
-							<a href="pages/order.html" ajax="ok">سبد خرید</a>
+							<a href="" ajax="ok">سبد خرید</a>
 						</li>
 
 
@@ -63,7 +63,7 @@
 					</form>
 
 					<h1>
-						<a href="index.html">باراد</a>
+						<a href="index.php">باراد</a>
 					</h1>
 
 					<ul class="sn">

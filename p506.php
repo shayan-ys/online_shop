@@ -16,12 +16,12 @@
 	<ol class="breadcrumb">
 
 		<li>
-			<a href="http://atramart.com/">صفحه اصلی</a>
+			<a href="http://shayanys.com/">صفحه اصلی</a>
 		</li>
 
 
 			<li class="active">
-				<a href="http://atramart.com/fa/product.html">
+				<a href="http://shayanys.com/fa/product.html">
 
 						صفحه جزئیات محصول
 
@@ -34,21 +34,21 @@
 
 
 					<li>
-						<a href="http://atramart.com/fa/product/cat/1.html">محصولات دیجیتال</a>
+						<a href="http://shayanys.com/fa/product/cat/1.html">محصولات دیجیتال</a>
 					</li>
 
 
 
 
 					<li>
-						<a href="http://atramart.com/fa/product/cat/21.html">گروه لپ تاپ</a>
+						<a href="http://shayanys.com/fa/product/cat/21.html">گروه لپ تاپ</a>
 					</li>
 
 
 
 
 					<li class="active">
-						<a href="http://atramart.com/fa/product/cat/22.html">دستگاه لپ تاپ</a>
+						<a href="http://shayanys.com/fa/product/cat/22.html">دستگاه لپ تاپ</a>
 					</li>
 
 
@@ -98,37 +98,37 @@
 
                                             <div class="item">
 
-                                                <img class="oxe" src="http://atramart.com/upload/thumb1/product/1443963051.jpg" width="350" height="350" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
+                                                <img class="oxe" src="http://shayanys.com/upload/thumb1/product/1443963051.jpg" width="350" height="350" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
 
                                             </div>
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963698.jpg" width="350" height="350" alt="7" title="7" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963698.jpg" width="350" height="350" alt="7" title="7" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963665.jpg" width="350" height="350" alt="5" title="5" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963665.jpg" width="350" height="350" alt="5" title="5" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963693.jpg" width="350" height="350" alt="8" title="8" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963693.jpg" width="350" height="350" alt="8" title="8" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963646.jpg" width="350" height="350" alt="4" title="4" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963646.jpg" width="350" height="350" alt="4" title="4" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963634.jpg" width="350" height="350" alt="3" title="3" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963634.jpg" width="350" height="350" alt="3" title="3" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963614.jpg" width="350" height="350" alt="2" title="2" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963614.jpg" width="350" height="350" alt="2" title="2" />
 
 
 
-                                            <img class="oxe" src="http://atramart.com/upload/thumb1/product_tab/1443963596.jpg" width="350" height="350" alt="1" title="1" />
+                                            <img class="oxe" src="http://shayanys.com/upload/thumb1/product_tab/1443963596.jpg" width="350" height="350" alt="1" title="1" />
 
 
 
@@ -142,8 +142,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product/1443963051.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb4/product/1443963051.jpg" width="70" height="70" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
+                                                            <a href="http://shayanys.com/upload/product/1443963051.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb4/product/1443963051.jpg" width="70" height="70" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
                                                         </li>
 
                                                 </div>
@@ -155,8 +155,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963698.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963698.jpg" width="70" height="70" alt="7" title="7" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963698.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963698.jpg" width="70" height="70" alt="7" title="7" />
                                                         </li>
 
                                                 </div>
@@ -167,8 +167,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963665.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963665.jpg" width="70" height="70" alt="5" title="5" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963665.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963665.jpg" width="70" height="70" alt="5" title="5" />
                                                         </li>
 
                                                 </div>
@@ -179,8 +179,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963693.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963693.jpg" width="70" height="70" alt="8" title="8" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963693.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963693.jpg" width="70" height="70" alt="8" title="8" />
                                                         </li>
 
                                                 </div>
@@ -191,8 +191,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963646.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963646.jpg" width="70" height="70" alt="4" title="4" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963646.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963646.jpg" width="70" height="70" alt="4" title="4" />
                                                         </li>
 
                                                 </div>
@@ -203,8 +203,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963634.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963634.jpg" width="70" height="70" alt="3" title="3" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963634.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963634.jpg" width="70" height="70" alt="3" title="3" />
                                                         </li>
 
                                                 </div>
@@ -215,8 +215,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963614.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963614.jpg" width="70" height="70" alt="2" title="2" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963614.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963614.jpg" width="70" height="70" alt="2" title="2" />
                                                         </li>
 
                                                 </div>
@@ -227,8 +227,8 @@
 
                                                     <ul class="thumbnails">
                                                         <li>
-                                                            <a href="http://atramart.com/upload/product_tab/1443963596.jpg"></a>
-                                                            <img src="http://atramart.com/upload/thumb2/product_tab/1443963596.jpg" width="70" height="70" alt="1" title="1" />
+                                                            <a href="http://shayanys.com/upload/product_tab/1443963596.jpg"></a>
+                                                            <img src="http://shayanys.com/upload/thumb2/product_tab/1443963596.jpg" width="70" height="70" alt="1" title="1" />
                                                         </li>
 
                                                 </div>
@@ -331,9 +331,9 @@
                                             <div class="btn-group">
                                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">اشتراک گذاری</button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="https://www.facebook.com/sharer.php?u=http://atramart.com/fa/news/506.html&amp;t=%d9%84%d9%86%d9%88%d9%88%20%d8%b2%d8%af%205170%20%da%af%d8%b1%d8%a7%d9%81%db%8c%da%a9%204%20%da%af%db%8c%da%af%d8%a7%d8%a8%d8%a7%db%8c%d8%aa" target="_blank"><i class="io j1"></i>فیس بوک</a></li>
-                                                    <li><a href="https://plus.google.com/share?url=http://atramart.com/fa/news/506.html" target="_blank"><i class="io j2"></i>گوگل پلاس</a></li>
-                                                    <li><a href="http://twitter.com/share?text=%d9%84%d9%86%d9%88%d9%88%20%d8%b2%d8%af%205170%20%da%af%d8%b1%d8%a7%d9%81%db%8c%da%a9%204%20%da%af%db%8c%da%af%d8%a7%d8%a8%d8%a7%db%8c%d8%aa&amp;url=http://atramart.com/fa/news/506.html" target="_blank"><i class="io j3"></i>تویتر</a></li>
+                                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="io j1"></i>فیس بوک</a></li>
+                                                    <li><a href="https://plus.google.com/" target="_blank"><i class="io j2"></i>گوگل پلاس</a></li>
+                                                    <li><a href="http://twitter.com/" target="_blank"><i class="io j3"></i>تویتر</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -685,7 +685,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -833,7 +833,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -866,7 +866,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -881,7 +881,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -896,7 +896,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -911,7 +911,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -939,7 +939,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -967,7 +967,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -982,7 +982,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -1010,7 +1010,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -1025,7 +1025,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -1053,7 +1053,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -1068,7 +1068,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/ok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/ok.png" alt="" />
 
 
                                             </td>
@@ -1083,7 +1083,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -1098,7 +1098,7 @@
                                             <td>
 
 
-                                                <img src="http://atramart.com/template/default/fa/img/nok.png" alt="" />
+                                                <img src="http://shayanys.com/template/default/fa/img/nok.png" alt="" />
 
 
                                             </td>
@@ -1307,7 +1307,7 @@
                             <h3 class="o2">نظر خود را بنویسید</h3>
                             <div class="bh3"></div>
                         </div>
-                        <form class="ajax" ajax_method="post" action="http://atramart.com/ajax.php?comments" noscroll="yes">
+                        <form class="ajax" ajax_method="post" action="http://shayanys.com/ajax.php?comments" noscroll="yes">
                             <input type="hidden" name="itemid" id="itemid" value="506" />
                             <input type="hidden" name="cat" id="cat" value="product" />
 
@@ -1324,9 +1324,9 @@
                                     <div class="captcha">
                                         <label>کد امنیتی :</label>
                                         <input type="" type="text" name="cap" id="cap" maxlength="5" error="لطفا کد امنیتی را وارد کنید" check="cap" check_error="لطفا کد امنیتی را صحیح وارد کنید" />
-                                        <a href="javascript:void(0);" onclick="$(this).find('img').attr('src', 'http://atramart.com/cap.php?t=' + Math.random());
+                                        <a href="javascript:void(0);" onclick="$(this).find('img').attr('src', 'http://shayanys.com/cap.php?t=' + Math.random());
                                                 return false;" id="cap_code">
-                                            <img src="http://atramart.com/cap.php" />
+                                            <img src="http://shayanys.com/cap.php" />
                                         </a>
                                     </div>
                                 </div>

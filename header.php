@@ -5,26 +5,26 @@
         <div class="one">
           <ul>
             <li><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
-            <li><a href="pages/register.html"><i></i>عضویت</a></li>
+            <li><a href="register.php"><i></i>عضویت</a></li>
             <li><a id="popModal_ex1" class="pm">سبد خرید<span class="shop_num">0</span></a></li>
             <li>
               <a href="#menu" id="toggle"><span></span></a>
               <div id="menu">
                 <ul>
                   <li>
-                    <a href="main.html" ajax="ok">صفحه اصلی</a>
+                    <a href="index.php" ajax="ok">صفحه اصلی</a>
                   </li>
                   <li>
-                    <a href="pages/contact.html" ajax="ok">تماس با ما</a>
+                    <a href="index.php" ajax="ok">تماس با ما</a>
                   </li>
                   <li>
-                    <a href="pages/about.html" ajax="ok">درباره ما</a>
+                    <a href="index.php" ajax="ok">درباره ما</a>
                   </li>
                   <li>
-                    <a href="pages/news.html" ajax="ok">اخبار </a>
+                    <a href="index.php" ajax="ok">اخبار </a>
                   </li>
                   <li>
-                    <a href="pages/page/Terms-Condition.html" ajax="ok">قوانین و مقررات</a>
+                    <a href="index.php" ajax="ok">قوانین و مقررات</a>
                   </li>
                 </ul>
               </div>
