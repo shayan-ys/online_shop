@@ -108,7 +108,7 @@
 											<h3>
 												<a href="pages/book102.php">امپراتور کوتوله ی سرزمین لی لی پوت </a>
 											</h3>
-											<span class="price">۶,۰۰۰ تومانومان</span>
+											<span class="price">۶,۰۰۰ تومان</span>
 											<span class="rating score-callback" data-score="0"></span>
 											<span class="existent wew1">موجود</span>
 										</div>

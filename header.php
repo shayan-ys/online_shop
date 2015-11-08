@@ -150,7 +150,7 @@ height: 30px;" href="<?php echo $path_to_root; ?>pages/found.php" ><span class="
               <a onclick="login(this);" class="btn btn-danger" >ورود</a>
             </div>
             <div class="col-xs-12">
-              <a href="pages/forgotpass.html">رمز عبور خود را فراموش کرده اید ؟</a>
+              <a href="<?php echo $path_to_root; ?>pages/forgotpass.php">رمز عبور خود را فراموش کرده اید ؟</a>
             </div>
           </div>
         </form>
