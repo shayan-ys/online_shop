@@ -216,7 +216,7 @@ height: 30px;" href="found.php" >جستجو</a>
             </button>
           </div>
           <div class="collapse navbar-collapse js-navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="width:100%;">
               <li class="dropdown mega-dropdown first-menu">
                 <a href="pages/product/cat/22.html#/pagesize-20/brand-33" ajax="ok" class="dropdown-toggle" data-toggle="dropdown">لنوو<span class="dp"></span></a>
                 <div class="dropdown-menu mega-dropdown-menu row">
@@ -261,6 +261,9 @@ height: 30px;" href="found.php" >جستجو</a>
                     </div>
                   </div>
                 </div>
+              </li>
+              <li style="float:left;">
+                <a class="btn btn-danger" style="color:white;" href="<?php echo $path_to_root; ?>pages/searchPro.php">جستجوی پیشرفته محصولات</a>
               </li>
             </ul>
           </div>
