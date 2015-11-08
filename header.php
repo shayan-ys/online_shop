@@ -41,9 +41,7 @@
 
           <ul>
             <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
-            <li id="registerOrProfile"><a href="register.php"><i></i>عضویت</a></li>
-            <!-- <li id="userOrLogOut"><a class="user-login" onclick="logout();"><i></i>خروج</a></li>
-            <li id="registerOrProfile"><a href="pages/profile.php"><i></i>نگار بیاتی</a></li> -->
+            <li id="registerOrProfile"><a href="<?php echo $path_to_root; ?>register.php"><i></i>عضویت</a></li>
 
             <li><a id="popModal_ex1" class="pm">سبد خرید<span class="shop_num">0</span></a></li>
             <li>
@@ -58,13 +56,7 @@
                     <a href="<?php echo $path_to_root; ?>index.php" >تماس با ما</a>
                   </li>
                   <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" >درباره ما</a>
-                  </li>
-                  <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" >اخبار </a>
-                  </li>
-                  <li>
-                    <a href="<?php echo $path_to_root; ?>index.php" >قوانین و مقررات</a>
+                    <a href="<?php echo $path_to_root; ?>pages/about.php" >درباره ما</a>
                   </li>
                 </ul>
               </div>
@@ -100,7 +92,7 @@ background-position: center;
 border-radius: 3px 0 0 3px;
 text-indent:-9999px;
 background-repeat: no-repeat;
-height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+height: 30px;" href="<?php echo $path_to_root; ?>pages/found.php" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
             </form>
             <div id="ajax_result25"></div>
           </div>
@@ -108,7 +100,7 @@ height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-h
           function logout() {
             html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
             $("#userOrLogOut").html(html1);
-            html2 = '<a href="register.php"><i></i>عضویت</a>';
+            html2 = '<a href="<?php echo $path_to_root; ?>register.php"><i></i>عضویت</a>';
             $("#registerOrProfile").html(html2);
             $("#logout_success").modal('toggle');
           }
@@ -123,47 +115,9 @@ height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-h
           function login_show() {
             html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
             $("#userOrLogOut").html(html1);
-            html2 = '<a href="pages/profile.php"><i></i>نگار بیاتی</a>';
+            html2 = '<a href="<?php echo $path_to_root; ?>pages/profile.php"><i></i>نگار بیاتی</a>';
             $("#registerOrProfile").html(html2);
           }
-          $("#formsearch").on('submit', function() {
-            action = $(this).attr('action');
-            value = $('#formsearch .search_inp1').val();
-            if ($("#formsearch .search_inp1").val() !== 'جستجو...' && $("#formsearch .search_inp1").val().length > 1) {
-              window.location = action + '.html#/keyword-' + value;
-            }
-            return false;
-          });
-          $(document).ready(function() {
-            $(":input[name='search']").keyup(function() {
-              var count = $(":input[name='search']").val().length;
-              var tit = $(":input[name='search']").val();
-              if (count > 1) {
-                $.ajax({
-                  type: "POST",
-                  url: site_lang + '/search.html&title=' + encodeURIComponent(tit) + '&ajax=ok',
-                  success: function(data) {
-                    $('#ajax_result25').html(data);
-                    $(document).bind('click.close',function(e){
-                      if (e.which == 1){
-                        $(".advanced-search").slideUp(1000);
-                        $(document).unbind('click.close');
-                      }
-                    });
-                  }
-                });
-                return false;
-              } else {
-                $('.advanced-search').slideUp(1000);
-              }
-            });
-          });
-          $("#ajax_result25,.advanced-search").click(function(e) {
-            e.stopPropagation(e);
-          });
-          $(".search").click(function(e) {
-            e.stopPropagation(e);
-          });
           </script>
         </div>
       </div>
@@ -218,7 +172,7 @@ height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-h
           <div class="collapse navbar-collapse js-navbar-collapse">
             <ul class="nav navbar-nav" style="width:100%;">
               <li class="dropdown mega-dropdown first-menu">
-                <a href="pages/product/cat/22.html#/pagesize-20/brand-33"  class="dropdown-toggle" data-toggle="dropdown">لپتاپ<span class="dp"></span></a>
+                <a href="<?php echo $path_to_root; ?>pages/searchPro.php"  class="dropdown-toggle" data-toggle="dropdown">لپتاپ<span class="dp"></span></a>
                 <div class="dropdown-menu mega-dropdown-menu row">
                   <ul>
                     <li class="col-xs-12 col-sm-4">
@@ -244,14 +198,14 @@ height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-h
                   <div class="img-menu" style="height: 335px;">
                     <div class="wall">
                       <a href="<?php echo $path_to_root; ?>pages/searchPro.php" target="_blank">
-                        <img src="upload/thumb1/menu/1425734088.jpg" alt="لپتاپ" title="لپتاپ" width="400" height="335" />
+                        <img src="http://static.bamilo.com/p/asus-5161-4330111-1-product.jpg" alt="لپتاپ" title="لپتاپ" width="400" height="335" />
                       </a>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="dropdown mega-dropdown first-menu">
-                <a href="pages/product/cat/22.html#/pagesize-20/brand-33"  class="dropdown-toggle" data-toggle="dropdown">کتاب<span class="dp"></span></a>
+                <a href="<?php echo $path_to_root; ?>pages/searchPro.php"  class="dropdown-toggle" data-toggle="dropdown">کتاب<span class="dp"></span></a>
                 <div class="dropdown-menu mega-dropdown-menu row">
                   <ul>
                     <li class="col-xs-12 col-sm-4">
@@ -282,7 +236,7 @@ height: 30px;" href="found.php" ><span class="glyphicon glyphicon-search" aria-h
                 </div>
               </li>
               <li style="float:left;">
-                <a class="btn btn-danger" style="color:white;" href="<?php echo $path_to_root; ?>pages/searchPro.php">جستجوی پیشرفته محصولات</a>
+                <a class="btn-danger searchPro" style="color:white;" href="<?php echo $path_to_root; ?>pages/searchPro.php">جستجوی پیشرفته محصولات</a>
               </li>
             </ul>
           </div>

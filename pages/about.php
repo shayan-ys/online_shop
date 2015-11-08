@@ -37,9 +37,6 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="about">
-						<p style="text-align:center;">
-							<img alt="" src="" style="width: 1020px; height: 367px; text-align: center;" />
-						</p>
 						<h3 dir="RTL" style="text-align: justify;">
 							<span style="color:#a52a2a;"><strong>راه</strong> <strong>حل</strong> <strong>های</strong> <strong>نوین خرید</strong></span>
 						</h3>

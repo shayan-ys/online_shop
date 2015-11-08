@@ -2,34 +2,22 @@
 <?php require $path_to_root.'begin.php'; ?>
 <?php include $path_to_root.'header.php'; ?>
 
-			<section id="one">
+<section id="one">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="row">
-
-	<ol class="breadcrumb">
-
-		<li>
-			<a href="http://atramart.com/">صفحه اصلی</a>
-		</li>
-
-
-			<li class="active">
-				<a href="http://atramart.com/fa/forgotpass.html">
-
-						بازیابی رمزعبور
-
-				</a>
-			</li>
-
-
-
-
-
-	</ol>
-
-</div>
+					<ol class="breadcrumb">
+						<li>
+							<a href="<?php echo $path_to_root; ?>index.php">صفحه اصلی</a>
+						</li>
+						<li class="active">
+							<a href="<?php echo $path_to_root; ?>pages/forgotpass.php">
+								بازیابی رمزعبور
+							</a>
+						</li>
+					</ol>
+				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="row">
@@ -49,25 +37,25 @@
 			<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-sm-offset-2 col-md-offset-3 col-lg-offset-4">
 				<div class="box">
 					<div class="register-form">
-						<form action="http://atramart.com/ajax.php?user_do=forgot_pass">
+						<form action="">
 							<div class="col-xs-12">
 								<label>ایمیل</label>
-						        <input type="text" name="email" id="email" error="لطفا ایمیل را وارد کنید" check="email" check_error="ایمیل معتبر نمی باشد" />
-					        </div>
-					        <div class="col-xs-12">
-					        	<div class="fsc">
-						        	<label>کد امنیتی :</label>
-						        	<div class="capcha">
-						        		<input type="text" name="cap" id="cap" maxlength="5" error="لطفا کد امنیتی را وارد کنید" check="cap" check_error="لطفا کد امنیتی را صحیح وارد کنید" />
-						        		<a href="javascript:void(0);" onclick="$(this).find('img').attr('src', 'http://atramart.com/cap.php?t='+Math.random()); return false;" id="cap_code">
-											<img src="http://atramart.com/cap.php" />
+								<input type="text" name="email" id="email" error="لطفا ایمیل را وارد کنید" check="email" check_error="ایمیل معتبر نمی باشد" />
+							</div>
+							<div class="col-xs-12">
+								<div class="fsc">
+									<label>کد امنیتی :</label>
+									<div class="capcha">
+										<input type="text" name="cap" id="cap" maxlength="5" error="لطفا کد امنیتی را وارد کنید" check="cap" check_error="لطفا کد امنیتی را صحیح وارد کنید" />
+										<a href="javascript:void(0);" onclick="" id="cap_code">
+											<img src="" />
 										</a>
-						        	</div>
-					        	</div>
-					        </div>
-					        <div class="col-xs-12">
-					        	<input type="submit" value="ورود به حساب کاربری" />
-					        </div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<input type="submit" value="ورود به حساب کاربری" />
+							</div>
 						</form>
 					</div>
 				</div>

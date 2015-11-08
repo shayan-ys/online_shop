@@ -117,7 +117,7 @@
 									<li>
 										<div class="wall">
 											<a href="p506.php">
-												<img src="upload/thumb4/product/1430894656.jpg" width="80" height="80" alt="Lenovo Z5170 i7 RAM 16GB 1T " title="Lenovo Z5170 i7 RAM 16GB 1T " />
+												<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="80" height="80" alt="Lenovo Z5170 i7 RAM 16GB 1T " title="Lenovo Z5170 i7 RAM 16GB 1T " />
 											</a>
 										</div>
 										<div class="text">
@@ -200,7 +200,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
@@ -286,7 +286,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
@@ -384,7 +384,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
@@ -470,7 +470,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
@@ -568,7 +568,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
@@ -654,7 +654,7 @@
 										<div class="product">
 											<div class="wall">
 												<a href="pages/p506.php">
-													<img src="upload/thumb2/product/1444049512.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
+													<img src="http://static.bamilo.com/p/asus-4877-6933731-1-product.jpg" width="131" height="131" alt="Lenovo Z5170 i7 RAM 16GB 1T" title="Lenovo Z5170 i7 RAM 16GB 1T" />
 												</a>
 											</div>
 											<div class="info">
