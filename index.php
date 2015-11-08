@@ -14,44 +14,30 @@
 											<div id="owl-demo-slider" class="owl-carousel owl-theme">
 
 												<div class="item">
-													<a href="pages/product/cat/22.html#/pagesize-20/brand-31/stock-1" target="_blank">
+													<a href="http://orchardaz.com/wp-content/uploads/2015/04/refurb-apple-laptop-new2.jpg" target="_blank">
 
-														<img src="upload/thumb/banner/1435393659.jpg" width="870" height="330" alt="متفاوت باشید و متفاوت بمانید " title="متفاوت باشید و متفاوت بمانید " />
-
-													</a>
-												</div>
-
-												<div class="item">
-													<a href="pages/product/472-%d9%84%d9%86%d9%88%d9%88-%d8%b2%d8%af-5170-Ci5-8GB-1-4GB.html" target="_blank">
-
-														<img src="upload/thumb/banner/1439904441.jpg" width="870" height="330" alt="lenovo5170" title="lenovo5170" />
+														<img src="http://orchardaz.com/wp-content/uploads/2015/04/refurb-apple-laptop-new2.jpg" width="870" height="330" alt="متفاوت باشید و متفاوت بمانید " title="متفاوت باشید و متفاوت بمانید " />
 
 													</a>
 												</div>
 
 												<div class="item">
-													<a href="pages/product.html#/pagesize-20/keyword-offer" target="_blank">
+													<a href="http://dailycapital.pk/wp-content/uploads/2015/02/Apple-Macbook-Air-laptop.jpg" target="_blank">
 
-														<img src="upload/thumb/banner/1444555375.jpg" width="870" height="330" alt="حراجی سری جی " title="حراجی سری جی " />
-
-													</a>
-												</div>
-
-												<div class="item">
-													<a href="pages/page/socialnetworks.html" target="_blank">
-
-														<img src="upload/thumb/banner/1444640405.jpg" width="870" height="330" alt="اینست" title="اینست" />
+														<img src="http://dailycapital.pk/wp-content/uploads/2015/02/Apple-Macbook-Air-laptop.jpg" width="870" height="330" alt="lenovo5170" title="lenovo5170" />
 
 													</a>
 												</div>
 
 												<div class="item">
-													<a href="pages/page/socialnetworks.html" target="_blank">
+													<a href="http://g04.s.alicdn.com/kf/HT1eWqNFOJaXXagOFbXO/1903038/HT1eWqNFOJaXXagOFbXO.jpg" target="_blank">
 
-														<img src="upload/thumb/banner/1444640477.jpg" width="870" height="330" alt="تلگ" title="تلگ" />
+														<img src="http://g04.s.alicdn.com/kf/HT1eWqNFOJaXXagOFbXO/1903038/HT1eWqNFOJaXXagOFbXO.jpg" width="870" height="330" alt="حراجی سری جی " title="حراجی سری جی " />
 
 													</a>
 												</div>
+
+
 
 											</div>
 										</div>
