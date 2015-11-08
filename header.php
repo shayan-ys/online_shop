@@ -4,8 +4,12 @@
       <div class="top">
         <div class="one">
           <ul>
-            <li><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
-            <li><a href="register.php"><i></i>عضویت</a></li>
+
+            <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
+            <li id="registerOrProfile"><a href="register.php"><i></i>عضویت</a></li>
+            <!-- <li id="userOrLogOut"><a class="user-login" onclick="logout();"><i></i>خروج</a></li>
+            <li id="registerOrProfile"><a href="pages/profile.php"><i></i>نگار بیاتی</a></li> -->
+
             <li><a id="popModal_ex1" class="pm">سبد خرید<span class="shop_num">0</span></a></li>
             <li>
               <a id="toggle"><span></span></a>
@@ -56,6 +60,18 @@
             <div id="ajax_result25"></div>
           </div>
           <script>
+          function logout() {
+            html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
+            $("#userOrLogOut").html(html1);
+            html2 = '<a href="register.php"><i></i>عضویت</a>';
+            $("#registerOrProfile").html(html2);
+          }
+          function login() {
+            html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
+            $("#userOrLogOut").html(html1);
+            html2 = '<a href="pages/profile.php"><i></i>نگار بیاتی</a>';
+            $("#registerOrProfile").html(html2);
+          }
           $("#formsearch").on('submit', function() {
             action = $(this).attr('action');
             value = $('#formsearch .search_inp1').val();
@@ -106,7 +122,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-title"><h4><i></i>ورود اعضاء</h4></div>
         </div>
-        <form action="http://باراد.com/ajax.php?login" id="formloginlink">
+        <form id="formloginlink">
           <div class="modal-body">
             <div class="col-xs-12">
               <label>نام کاربری ( ایمیل ) :</label>
@@ -123,7 +139,7 @@
           </div>
           <div class="modal-footer">
             <div class="col-xs-12">
-              <input type="submit" value="ورود" />
+              <a onclick="login();" type="submit" value="ورود" />
             </div>
             <div class="col-xs-12">
               <a href="pages/forgotpass.html">رمز عبور خود را فراموش کرده اید ؟</a>
