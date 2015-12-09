@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Barad\Events;
 
 abstract class Event
 {

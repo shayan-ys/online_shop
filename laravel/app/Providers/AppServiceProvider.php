@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Barad\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
