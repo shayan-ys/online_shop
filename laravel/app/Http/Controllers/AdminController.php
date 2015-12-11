@@ -18,25 +18,37 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function adminCheck()
     {
-
         if (Auth::check()) {
-
             $admin_secure = Admin::where('email', '=', Auth::user()['original']['email'])->where('password', '=', Auth::user()['original']['password'])->first();
             // He is User but not admin
-            if($admin_secure == null)
-                return redirect('/customer');
-
-            $admin = array('name' => Auth::user()['original']['name']);
-            return view('admin.dashboard', array('admin' => $admin));
-        }
-        else{
+            if ($admin_secure == null){
+                redirect('/online_shop/laravel/public/customer');
+                echo "unauthorized access go to: <a href='/online_shop/laravel/public/customer'>customer</a>";
+                die();
+            }
+        }else{
             Session::put('user_type', 'admin');
-            return redirect('/user/login');
+            redirect('/online_shop/laravel/public/user/login');
+            echo "unauthorized access go to: <a href='/online_shop/laravel/public/user/login'>login page</a>";
+            die();
         }
     }
+    public function index()
+    {
+        self::adminCheck();
 
+        $admin = array('name' => Auth::user()['original']['name']);
+        return view('admin.dashboard', array(
+            'head'=>array('title'=> 'Dashboard'),
+            'admin' => $admin));
+    }
+
+
+    public function product($action){
+        echo "hello".$action;
+    }
     /**
      * Show the form for creating a new resource.
      *

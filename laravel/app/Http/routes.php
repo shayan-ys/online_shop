@@ -26,7 +26,8 @@ Route::post('user/register', 'Auth\AuthController@postRegister');
 
 Route::resource('customers', 'CustomerController');
 Route::resource('admin', 'AdminController',
-    ['only' => ['index']]);
+    ['only' => ['index','show','product']]);
+Route::get('admin/product/{action}', 'AdminController@product');
 
 Route::get('dashboard', function(){
     if( Session::get('user_type')=="admin" )
