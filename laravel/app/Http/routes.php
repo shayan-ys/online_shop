@@ -27,6 +27,7 @@ Route::post('user/register', 'Auth\AuthController@postRegister');
 Route::resource('customers', 'CustomerController');
 Route::resource('admin', 'AdminController',
     ['only' => ['index','show','product']]);
+
 Route::get('admin/product/{action}', 'AdminController@product');
 Route::post('admin/product/add', 'AdminController@postAddProduct');
 

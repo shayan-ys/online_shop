@@ -22,7 +22,7 @@
                         <div class="col-md-12">
                             <div class="content-box-header">
                                 <h3>Product Creating Form</h3>
-                                {{--<form method="POST" action="{{ asset('/admin/product/add') }}">--}}
+                                
                                 {!!  Form::open(array('action'=>'AdminController@postAddProduct', 'method' => 'post')) !!}
                                     {!! csrf_field() !!}
 
@@ -41,11 +41,22 @@
                                             </select>
                                         </div>
 
+                                        <div>
+                                            <h4>Product Image</h4>
+                                            <input type="file" name="img_path" />
+                                        </div>
+
                                         <div class="laptop">
                                             <h4>Product Color</h4>
                                             <p>
-                                            <div class="bfh-colorpicker" data-name="colorpicker"></div>
+                                            <div class="bfh-colorpicker" data-name="color"></div>
                                             </p>
+                                        </div>
+
+                                        <div>
+                                            <h4 class="book">Author</h4>
+                                            <h4 class="laptop">Manufacturer</h4>
+                                            <input class="form-control" type="text" name="creator" >
                                         </div>
 
                                         <div>
@@ -95,13 +106,6 @@
                                             </p>
                                         </div>
 
-                                        <div>
-                                            <h4>Tags</h4>
-                                            <p>
-                                            <div id="tags" data-name="tags"></div>
-                                            </p>
-                                        </div>
-
                                         <div><br></div>
 
                                         <div>
@@ -111,7 +115,6 @@
                                     </div>
                                 </div>
                                 {!! Form::close() !!}
-                                {{--</form>--}}
                             </div>
                         </div>
                     </div>

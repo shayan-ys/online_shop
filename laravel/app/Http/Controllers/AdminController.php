@@ -55,8 +55,8 @@ class AdminController extends Controller
         self::adminCheck();
         switch($action){
             case 'add': return self::addProduct(); break;
+            default: return self::indexProduct();
         }
-        return;
     }
     public function postAddProduct(){
         $request = Input::all();
@@ -68,15 +68,23 @@ class AdminController extends Controller
                 $request, $validator
             );
         }
-        echo "<hr><pre>";
-        var_dump($request);
+//        echo "<hr><pre>";
+//        var_dump($request);
         unset($request['_token']);
-        Product::create($request);
+        $result = Product::create($request);
+        return redirect('/admin/product/add');
     }
 
     protected function addProduct(){
 
         return view('admin.product.add', array(
+            'head'=>array('title'=> 'Product'),
+            'admin' => self::$admin));
+    }
+    protected function indexProduct(){
+
+        echo "h";
+        return view('admin.product.index', array(
             'head'=>array('title'=> 'Product'),
             'admin' => self::$admin));
     }
