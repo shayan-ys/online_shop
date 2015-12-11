@@ -2,11 +2,11 @@
 
 namespace Barad\Http\Controllers;
 
+use Barad\Customer;
 use Illuminate\Http\Request;
 
 use Barad\Http\Requests;
 use Barad\Http\Controllers\Controller;
-use Barad\Customer;
 
 class CustomerController extends Controller
 {
@@ -17,7 +17,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        echo "Hello World!";
+        $customer = Customer::find(1);
+        return view('customer.show', array('customer' => $customer));
     }
 
     /**
@@ -50,7 +51,7 @@ class CustomerController extends Controller
     public function show($id)
     {
         $customer = Customer::find($id);
-        return view('customer.show', array('customer'=> $customer));
+        return view('customer.show', array('customer' => $customer));
     }
 
     /**
