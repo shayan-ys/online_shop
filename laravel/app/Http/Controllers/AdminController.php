@@ -2,12 +2,14 @@
 
 namespace Barad\Http\Controllers;
 
+use Barad\Admin;
 use Barad\Customer;
 use Illuminate\Http\Request;
 
 use Barad\Http\Requests;
 use Barad\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -21,13 +23,17 @@ class AdminController extends Controller
 
         if (Auth::check()) {
 
+            $admin_secure = Admin::where('email', '=', Auth::user()['original']['email'])->where('password', '=', Auth::user()['original']['password'])->first();
+            // He is User but not admin
+            if($admin_secure == null)
+                return redirect('/customer');
+
             $admin = array('name' => Auth::user()['original']['name']);
             return view('admin.dashboard', array('admin' => $admin));
-//            echo "<a href='admin/logout' >logout</a>";
-//            echo "Welcome ".Auth::user()['original']['name'];
         }
         else{
-            return redirect('/admin/login');
+            Session::put('user_type', 'admin');
+            return redirect('/user/login');
         }
     }
 

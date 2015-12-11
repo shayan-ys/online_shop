@@ -16,7 +16,7 @@
 <body>
 <h1>Welcome back {{ $admin['name'] }}</h1>
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-<a href='admin/logout' >logout</a>
+<a href='user/logout' >logout</a>
 
 {!! HTML::script('assets/bootstrap/js/jquery.min.js') !!}
 {!! HTML::script('assets/bootstrap/js/npm.js') !!}

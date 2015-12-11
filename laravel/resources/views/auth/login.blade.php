@@ -23,20 +23,7 @@
 			        <div class="box">
 			            <div class="content-wrap">
 			                <h6>Login</h6>
-			                {{--<div class="social">--}}
-	                            {{--<a class="face_login" href="#">--}}
-	                                {{--<span class="face_icon">--}}
-	                                    {{--<img src="images/facebook.png" alt="fb">--}}
-	                                {{--</span>--}}
-	                                {{--<span class="text">Sign in with Facebook</span>--}}
-	                            {{--</a>--}}
-	                            {{--<div class="division">--}}
-	                                {{--<hr class="left">--}}
-	                                {{--<span>or</span>--}}
-	                                {{--<hr class="right">--}}
-	                            {{--</div>--}}
-	                        {{--</div>--}}
-                            <form method="POST" action="/online_shop/laravel/public/admin/login">
+                            <form method="POST" action="/online_shop/laravel/public/user/login">
                                 {!! csrf_field() !!}
                                 <input class="form-control" type="email" name="email" placeholder="E-mail address" value="{{ old('email') }}">
                                 <input class="form-control" type="password" name="password" id="password" placeholder="Password">
@@ -51,7 +38,9 @@
 			        </div>
 
 			        <div class="already">
-			            <p>Don't have an account yet?</p>
+			            <p>Don't have an account yet?</p><a href="/online_shop/laravel/public/user/register">Sign Up</a>
+                        </br>
+                        or
                         </br>
 			            <a href="mailto:shayan.yousefian1372@gmail.com?subject=admin access request">contact: shayan.yousefian1372@gmail.com</a>
 			        </div>

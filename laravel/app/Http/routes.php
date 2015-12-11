@@ -16,14 +16,21 @@ Route::get('/', function () {
 });
 
 // Authentication routes...
-Route::get('admin/login', 'Auth\AuthController@getLogin');
-Route::post('admin/login', 'Auth\AuthController@postLogin');
-Route::get('admin/logout', 'Auth\AuthController@getLogout');
+Route::get('user/login', 'Auth\AuthController@getLogin');
+Route::post('user/login', 'Auth\AuthController@postLogin');
+Route::get('user/logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
-Route::get('admin/register', 'Auth\AuthController@getRegister');
-Route::post('admin/register', 'Auth\AuthController@postRegister');
+Route::get('user/register', 'Auth\AuthController@getRegister');
+Route::post('user/register', 'Auth\AuthController@postRegister');
 
 Route::resource('customers', 'CustomerController');
 Route::resource('admin', 'AdminController',
     ['only' => ['index']]);
+
+Route::get('dashboard', function(){
+    if( Session::get('user_type')=="admin" )
+        return redirect('/admin');
+    else
+        return redirect('/customer');
+});
