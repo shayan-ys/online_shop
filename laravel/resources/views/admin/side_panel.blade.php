@@ -12,7 +12,7 @@ $current[$title] = "class=current";
     <div class="sidebar content-box" style="display: block;">
         <ul class="nav">
             <!-- Main menu -->
-            <li {{ $current['Dashboard'] }}><a href="{{ asset('/admin') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+            <li {{ $current['Dashboard'] or '' }}><a href="{{ asset('/admin') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
             <li {{ $current['Product'] or '' }}><a href="{{ asset('/admin/product') }}"><i class="glyphicon glyphicon-tags"></i> Product</a></li>
             <li {{ $current[''] or '' }}><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
             <li {{ $current[''] or '' }}><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li>

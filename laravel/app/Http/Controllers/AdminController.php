@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
+    public static $base_url;
+    public static $admin;
     /**
      * Display a listing of the resource.
      *
@@ -20,34 +22,45 @@ class AdminController extends Controller
      */
     public function adminCheck()
     {
+        self::$base_url = asset('/');
+        $admin = Auth::user()['original'];
+        self::$admin = array('name' => $admin['name']);
         if (Auth::check()) {
-            $admin_secure = Admin::where('email', '=', Auth::user()['original']['email'])->where('password', '=', Auth::user()['original']['password'])->first();
+            $admin_secure = Admin::where('email', '=', $admin['email'])->where('password', '=', $admin['password'])->first();
             // He is User but not admin
             if ($admin_secure == null){
-                redirect('/online_shop/laravel/public/customer');
-                echo "unauthorized access go to: <a href='/online_shop/laravel/public/customer'>customer</a>";
-                die();
+                return redirect('/customer');
             }
         }else{
             Session::put('user_type', 'admin');
-            redirect('/online_shop/laravel/public/user/login');
-            echo "unauthorized access go to: <a href='/online_shop/laravel/public/user/login'>login page</a>";
-            die();
+            return redirect('/user/login');
         }
+        return true;
     }
     public function index()
     {
-        self::adminCheck();
+        if(self::adminCheck()!==true)
+            return self::adminCheck();
 
-        $admin = array('name' => Auth::user()['original']['name']);
         return view('admin.dashboard', array(
             'head'=>array('title'=> 'Dashboard'),
-            'admin' => $admin));
+            'admin' => self::$admin));
     }
 
 
     public function product($action){
-        echo "hello".$action;
+        self::adminCheck();
+        switch($action){
+            case 'add': return self::addProduct(); break;
+        }
+        return;
+    }
+
+    public function addProduct(){
+
+        return view('admin.product.add', array(
+            'head'=>array('title'=> 'Product'),
+            'admin' => self::$admin));
     }
     /**
      * Show the form for creating a new resource.
