@@ -28,6 +28,7 @@ Route::resource('customers', 'CustomerController');
 Route::resource('admin', 'AdminController',
     ['only' => ['index','show','product']]);
 Route::get('admin/product/{action}', 'AdminController@product');
+Route::post('admin/product/add', 'AdminController@postAddProduct');
 
 Route::get('dashboard', function(){
     if( Session::get('user_type')=="admin" )

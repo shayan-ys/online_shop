@@ -4,12 +4,15 @@ namespace Barad\Http\Controllers;
 
 use Barad\Admin;
 use Barad\Customer;
+use Barad\Product;
 use Illuminate\Http\Request;
 
 use Barad\Http\Requests;
 use Barad\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Validator;
+use Input;
 
 class AdminController extends Controller
 {
@@ -55,8 +58,23 @@ class AdminController extends Controller
         }
         return;
     }
+    public function postAddProduct(){
+        $request = Input::all();
+        $validator = Validator::make($request, [
+            'name' => 'required|max:255'
+        ]);
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+        echo "<hr><pre>";
+        var_dump($request);
+        unset($request['_token']);
+        Product::create($request);
+    }
 
-    public function addProduct(){
+    protected function addProduct(){
 
         return view('admin.product.add', array(
             'head'=>array('title'=> 'Product'),
