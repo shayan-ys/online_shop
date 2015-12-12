@@ -6,31 +6,62 @@
  * Time: 2:10 PM
  */
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barad | Sign Up Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    {!! HTML::style('assets/bootstrap/css/bootstrap.min.css') !!}
+            <!-- styles -->
+    {!! HTML::style('assets/css/styles.css') !!}
 
-<form method="POST" action="/online_shop/laravel/public/admin/register">
-    {!! csrf_field() !!}
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="login-bg">
+<div class="page-content container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-wrapper">
+                <div class="box">
+                    <div class="content-wrap">
+                        <h6>Sign Up</h6>
+                        <form method="POST" action="{{ asset('/user/register') }}">
+                            {!! csrf_field() !!}
+                            <input class="form-control" type="text" name="name" value="{{ old('name') }}" placeholder="Name">
+                            <input class="form-control" type="email" name="email" placeholder="E-mail address" value="{{ old('email') }}">
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+                            <input class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password">
+                            <div class="action">
+                                <button class="btn btn-primary signup" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-    <div>
-        Name
-        <input type="text" name="name" value="{{ old('name') }}">
+                <div class="already">
+                    <p>Don't have an account yet?</p><a href="/online_shop/laravel/public/user/register">Sign Up</a>
+                    </br>
+                    or
+                    </br>
+                    <a href="mailto:shayan.yousefian1372@gmail.com?subject=admin access request">contact: shayan.yousefian1372@gmail.com</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
-    </div>
 
-    <div>
-        Password
-        <input type="password" name="password">
-    </div>
 
-    <div>
-        Confirm Password
-        <input type="password" name="password_confirmation">
-    </div>
-
-    <div>
-        <button type="submit">Register</button>
-    </div>
-</form>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+{!! HTML::script('assets/bootstrap/js/jquery.min.js') !!}
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+{!! HTML::script('assets/bootstrap/js/bootstrap.min.js') !!}
+{!! HTML::script('assets/js/custom.js') !!}
+</body>
+</html>

@@ -12,23 +12,6 @@
             <div class="top">
                 <div class="one">
 
-                    <div class="modal fade" id="login_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
-                                </div>
-                                <div class="modal-body">
-                                    کاربرگرامی نگار٫
-                                    با موفقیت ورود یافتید.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="modal fade" id="logout_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -37,19 +20,25 @@
                                     <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
                                 </div>
                                 <div class="modal-body">
-                                    کاربرگرامی نگار٫
+                                    کاربر گرامی
+                                    <br>
                                     با موفقیت خروج یافتید
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                                    <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">بستن</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <ul>
-                        <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
-                        <li id="registerOrProfile"><a href="<?php  ?>register.php"><i></i>عضویت</a></li>
+                        @if(Auth::check())
+                            <li id="userOrLogOut"><a class="user-login" onclick="logout();"><i></i>خروج</a></li>
+                            <li id="registerOrProfile"><a href="<?php  ?>pages/profile.php"><i></i>{{ Auth::user()->name }}</a></li>
+                        @else
+                            <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
+                            <li id="registerOrProfile"><a href="{{ asset('/user/register') }}"><i></i>عضویت</a></li>
+                        @endif
 
                         <li><a id="popModal_ex1" class="pm">سبد خرید<span class="shop_num">0</span></a></li>
                         <li>
@@ -89,28 +78,36 @@
                         <h1><a href="<?php  ?>index.php">باراد</a></h1>
                     </div>
                     <div class="search">
-                        <form class="" id="formsearch" >
+                        <form class="" id="formsearch" method="GET" action="{{ asset('/search') }}">
+                            {!! csrf_field() !!}
                             <input type="text" placeholder="جستجو در کالاها ..." class="search_inp search_inp1" name="search" autocomplete="off" />
                             <!-- <input type="submit" value="جستجو..." /> -->
-                            <a style="float: left;
+                            <button type="submit" style="float: left;
 width: 7%;
 border:none;
 background:#d00000 url(../img/ico/5.png);
 background-position: center;
+color:#ffffff;
 border-radius: 3px 0 0 3px;
 text-indent:-9999px;
 background-repeat: no-repeat;
-height: 30px;" href="<?php  ?>pages/found.php" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+height: 30px;" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </form>
                         <div id="ajax_result25"></div>
                     </div>
                     <script>
                         function logout() {
-                            html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
-                            $("#userOrLogOut").html(html1);
-                            html2 = '<a href="<?php  ?>register.php"><i></i>عضویت</a>';
-                            $("#registerOrProfile").html(html2);
-                            $("#logout_success").modal('toggle');
+                            $.ajax({
+                                url: '{{ asset('/user/logout') }}',
+                                type: "get",
+                                success: function (data) {
+                                    html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
+                                    $("#userOrLogOut").html(html1);
+                                    html2 = '<a href="{{ asset('/user/register') }}"><i></i>عضویت</a>';
+                                    $("#registerOrProfile").html(html2);
+                                    $("#logout_success").modal('toggle');
+                                }
+                            });
                         }
                         function login(target) {
                             if($("#email").val() == 'negar@email.com'
@@ -138,7 +135,8 @@ height: 30px;" href="<?php  ?>pages/found.php" ><span class="glyphicon glyphicon
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <div class="modal-title"><h4><i></i>ورود اعضاء</h4></div>
                 </div>
-                <form id="formloginlink">
+                <form id="formloginlink" method="POST" action="{{ asset('/user/login') }}">
+                        {!! csrf_field() !!}
                     <div class="modal-body">
                         <div class="col-xs-12">
                             <label>نام کاربری ( ایمیل ) :</label>
@@ -155,7 +153,7 @@ height: 30px;" href="<?php  ?>pages/found.php" ><span class="glyphicon glyphicon
                     </div>
                     <div class="modal-footer">
                         <div class="col-xs-12">
-                            <a onclick="login(this);" class="btn btn-danger" >ورود</a>
+                            <button type="submit" class="btn btn-danger btn-lg" >ورود</button>
                         </div>
                         <div class="col-xs-12">
                             <a href="<?php  ?>pages/forgotpass.php">رمز عبور خود را فراموش کرده اید ؟</a>

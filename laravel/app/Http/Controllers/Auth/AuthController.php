@@ -2,6 +2,7 @@
 
 namespace Barad\Http\Controllers\Auth;
 
+use Barad\Http\Requests\Request;
 use Barad\User;
 use Validator;
 use Barad\Http\Controllers\Controller;

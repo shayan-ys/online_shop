@@ -2,6 +2,7 @@
 
 namespace Barad\Http\Controllers;
 
+use Barad\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Cookie\Middleware;
 
@@ -30,12 +31,55 @@ class BasketController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function get(Request $request) {
+        $cookie_basket = json_decode($request->cookie('basket'), true);
+        $db_basket = array();
+        $customer = null;
+
         if(!$request->ajax()) {
             echo "<pre>";
-            var_dump(json_decode($request->cookie('basket'), true));
+            var_dump($cookie_basket);
             echo "<hr>";
         }
-        return $request->cookie('basket');
+
+        if(Auth::check()){
+            $user = Auth::user();
+            $user = $user->toArray();
+            $customer = Customer::find($user['id']);
+            if($customer != NULL){
+                $customer_array = $customer->toArray();
+                $db_basket = json_decode($customer_array['basket'], true);
+            }
+        }
+        if(sizeof($db_basket)>0 && sizeof($cookie_basket)==0) {
+            return json_encode($db_basket);
+        }elseif(sizeof($db_basket)==0 && sizeof($cookie_basket)>0) {
+
+            $cookie_basket = json_encode($cookie_basket);
+            if($customer!=null) {
+                $customer->basket = $cookie_basket;
+                $customer->save();
+            }
+            return $cookie_basket;
+
+        }elseif(sizeof($db_basket)>0 && sizeof($cookie_basket)>0){
+            foreach( $db_basket as $key => $db_item) {
+                $new = true;
+                $cookie_item = array();
+                foreach ($cookie_basket as $key_c => $cookie_item)
+                    if ($db_item['id'] == $cookie_item['id']) {
+                        $db_basket[$key]['num'] += $cookie_item['num'];
+                        $new = false;
+                    }
+                if($new)
+                    $db_basket[] = $cookie_item;
+            }
+            $db_basket = json_encode($db_basket);
+            if($customer!=null) {
+                $customer->basket = $db_basket;
+                $customer->save();
+            }
+            return $db_basket;
+        }
     }
     public function reset(Request $request) {
         return response('Cookie cleared')->withCookie(cookie('basket',null));
@@ -57,10 +101,17 @@ class BasketController extends Controller
             }
             if($new)
                 $basket[] = $data;
+            $basket = json_encode($basket);
             if(Auth::check()) {
-
+                $user = Auth::user();
+                $user = $user->toArray();
+                $customer = Customer::find($user['id']);
+                if($customer != NULL){
+                    $customer->basket = $basket;
+                    $customer->save();
+                }
             }
-            return response('Cookie set')->withCookie(cookie()->forever('basket', json_encode($basket)));
+            return response('Cookie set')->withCookie(cookie()->forever('basket', $basket));
         }
         return "false";
     }
@@ -79,10 +130,18 @@ class BasketController extends Controller
                     unset($basket[$key]);
                 }
             }
-            if(Auth::check()) {
 
+            $basket = json_encode($basket);
+            if(Auth::check()) {
+                $user = Auth::user();
+                $user = $user->toArray();
+                $customer = Customer::find($user['id']);
+                if($customer != NULL){
+                    $customer->basket = $basket;
+                    $customer->save();
+                }
             }
-            return response('removed from cookie')->withCookie(cookie()->forever('basket', json_encode($basket)));
+            return response('removed from cookie')->withCookie(cookie()->forever('basket', $basket));
         }
         return "false";
     }
