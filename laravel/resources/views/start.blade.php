@@ -48,3 +48,7 @@
 {!! HTML::script('assets/js/scriptoffer.js') !!}
 {!! HTML::script('assets/js/plugin/raty/jquery.raty.js') !!}
 {!! HTML::script('assets/js/plugin/raty/javascripts/labs.js') !!}
+<script>
+    var site_url = "{{ asset('/') }}";
+    getBasket();
+</script>

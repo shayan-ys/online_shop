@@ -1,4 +1,16 @@
-function addToBasket(opt) {
+function addToBasket(opt,ajaxNeeded) {
+
+  if(ajaxNeeded) {
+    $.ajax({
+      url: 'http://localhost/online_shop/laravel/public/addBasket',
+      type: "get",
+      data: opt,
+      success: function (data) {
+        alert("data=" + data);
+      }
+    });
+  }
+
   if($('#content ul.list-cart li[pid="'+opt.id+'"]').length) {
     var prev_count = $('#content ul.list-cart li[pid="'+opt.id+'"] .count span').text();
     $('#content ul.list-cart li[pid="'+opt.id+'"] .count span').html((parseInt(prev_count) + parseInt(opt.num)));
@@ -32,7 +44,18 @@ function addToBasket(opt) {
 };
 
 function removeFromBasket(target) {
+
   target = $(target);
+  var pid = target.closest("li").attr("pid");
+  $.ajax({
+    url: 'http://localhost/online_shop/laravel/public/removeBasket',
+    type: "get",
+    data: {'id':pid},
+    success: function(data){
+      alert("data="+data);
+    }
+  });
+
   target.closest("li").remove();
   $("#popModal_ex1 .shop_num").html(parseInt($("#popModal_ex1 .shop_num").html()) - 1);
   updateSum();
@@ -46,4 +69,18 @@ function updateSum() {
     sum += parseInt(parseInt(price) * parseInt(num));
   });
   $("#content .bottom .fine span.amount").html( num2fa(sum) );
+}
+
+function getBasket() {
+  var basket;
+  $.ajax({
+    url: 'http://localhost/online_shop/laravel/public/getBasket',
+    type: "get",
+    dataType: 'json',
+    success: function (data) {
+      $.each(data, function(index, element) {
+        addToBasket(element,false);
+      });
+    }
+  });
 }

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Barad\Http\Requests;
 use Barad\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cookie;
 
 class ProductController extends Controller
 {

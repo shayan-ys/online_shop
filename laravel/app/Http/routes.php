@@ -24,6 +24,10 @@ Route::post('user/register', 'Auth\AuthController@postRegister');
 
 Route::resource('customers', 'CustomerController');
 Route::resource('product', 'ProductController');
+Route::get('addBasket', 'BasketController@add');
+Route::get('getBasket', 'BasketController@get');
+Route::get('resetBasket', 'BasketController@reset');
+Route::get('removeBasket', 'BasketController@remove');
 Route::resource('admin', 'AdminController',
     ['only' => ['index','show','product']]);
 

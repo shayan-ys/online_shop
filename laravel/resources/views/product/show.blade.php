@@ -281,19 +281,12 @@
                                     <li>قیمت برای شما : <span class="price_show_change orange-txt" id="price"></span></li>
                                 </ul>
                                 <div class="add-shop">
-                                    <a class="add-favorites poklick" data-toggle="modal" data-target=".bs-example-modal-sm" href="javascript:void(0);">
-                                        <script>
-                                            $(document).ready(function() {
-                                                $(document.body).on('click', ".poklick", function() {
-                                                    if($("input[name='login']").length == 0){
-                                                        $("#formloginlink").append('<input type="hidden" name="login" value="ok"/>');
-                                                    }
-                                                });
-                                            });
-                                        </script>
-                                        <span style="display: none;"></span>
-                                        <i></i>
-                                    </a>
+                                    @if (Auth::check())
+                                        <a class="add-favorites poklick" data-toggle="modal" data-target=".bs-example-modal-sm" href="javascript:void(0);">
+                                            <span style="display: none;"></span>
+                                            <i></i>
+                                        </a>
+                                    @endif
                                     <a class="add-cart" title="">افزودن به سبد خرید</a>
                                 </div>
                             </div>
@@ -536,6 +529,103 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    $(function() {
+        $(".add-cart").unbind("click").click(function() {
+            var num = $("#number").val();
+            var name = $(".pd h3 small").text();
+            var img_url = $("#sync1 img:first-child").attr("src");
+            var product_id = $(".product_info1_right_code").text();
+            addToBasket({
+                id: '{{ $product['id_product'] }}',
+                pid: product_id,
+                num: num,
+                img_url: img_url,
+                name: "{{ $product['name'] }}",
+                price: price
+            },true);
+            return false;
+        });
+    });
+    $(document).ready(function() {
+        var sync1 = $("#sync1");
+        var sync2 = $("#sync2");
+        sync1.owlCarousel({
+            singleItem: true,
+            slideSpeed: 1000,
+            navigation: false,
+            pagination: false,
+            afterAction: syncPosition,
+            responsiveRefreshRate: 200,
+        });
+        sync2.owlCarousel({
+            items: 5,
+            itemsDesktop: [1199, 4],
+            itemsDesktopSmall: [979, 3],
+            itemsTablet: [768, 4],
+            itemsMobile: [479, 1],
+            pagination: false,
+            navigation: true,
+            navigationText: [" ", " "],
+            responsiveRefreshRate: 100,
+            afterInit: function(el) {
+                el.find(".owl-item").eq(0).addClass("synced");
+            }
+        });
+        function syncPosition(el) {
+            var current = this.currentItem;
+            $("#sync2")
+                    .find(".owl-item")
+                    .removeClass("synced")
+                    .eq(current)
+                    .addClass("synced")
+            if ($("#sync2").data("owlCarousel") !== undefined) {
+                center(current)
+            }
+        }
+        $("#sync2").on("click", ".owl-item", function(e) {
+            e.preventDefault();
+            var number = $(this).data("owlItem");
+            sync1.trigger("owl.goTo", number);
+        });
+        function center(number) {
+            var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+            var num = number;
+            var found = false;
+            for (var i in sync2visible) {
+                if (num === sync2visible[i]) {
+                    var found = true;
+                }
+            }
+            if (found === false) {
+                if (num > sync2visible[sync2visible.length - 1]) {
+                    sync2.trigger("owl.goTo", num - sync2visible.length + 2)
+                } else {
+                    if (num - 1 === -1) {
+                        num = 0;
+                    }
+                    sync2.trigger("owl.goTo", num);
+                }
+            } else if (num === sync2visible[sync2visible.length - 1]) {
+                sync2.trigger("owl.goTo", sync2visible[1])
+            } else if (num === sync2visible[0]) {
+                sync2.trigger("owl.goTo", num - 1)
+            }
+        }
+    });
+    $("#owl-demo5").owlCarousel({
+        autoPlay: false,
+        navigation: true,
+        pagination: false,
+        items: 5,
+        itemsDesktop: [1199, 4],
+        itemsDesktopSmall: [979, 3]
+    });
+</script>
+
+
 
 @include('footer')
 @include('end')
