@@ -22,7 +22,7 @@
                         <div class="col-md-12">
                             <div class="content-box-header">
                                 <h3>Product Creating Form</h3>
-                                
+
                                 {!!  Form::open(array('action'=>'AdminController@postAddProduct', 'method' => 'post')) !!}
                                     {!! csrf_field() !!}
 
@@ -106,6 +106,16 @@
                                             </p>
                                         </div>
 
+                                        <div class="laptop">
+                                            <h4>CPU Type (Generation and Name)</h4>
+                                            <input class="form-control" type="text" name="cpu_type" />
+                                        </div>
+
+                                        <div>
+                                            <h4>Description</h4>
+                                            <textarea name="description" data-name="description" id="ckeditor_full"></textarea>
+                                        </div>
+
                                         <div><br></div>
 
                                         <div>
@@ -152,6 +162,9 @@
     {!! HTML::script('assets/vendors/bootstrap-datetimepicker/datetimepicker.css') !!}
     {!! HTML::script('assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js') !!}
     {!! HTML::script('assets/js/forms.js') !!}
+            <!-- ckeditor -->
+    {!! HTML::script('assets/vendors/ckeditor/ckeditor.js') !!}
+    {!! HTML::script('assets/vendors/ckeditor/adapters/jquery.js') !!}
 
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 

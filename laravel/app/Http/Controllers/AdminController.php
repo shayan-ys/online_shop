@@ -3,7 +3,9 @@
 namespace Barad\Http\Controllers;
 
 use Barad\Admin;
+use Barad\Book;
 use Barad\Customer;
+use Barad\Laptop;
 use Barad\Product;
 use Illuminate\Http\Request;
 
@@ -61,17 +63,27 @@ class AdminController extends Controller
     public function postAddProduct(){
         $request = Input::all();
         $validator = Validator::make($request, [
-            'name' => 'required|max:255'
+            'name' => 'required|max:255',
+            'cat'=> 'required'
         ]);
         if ($validator->fails()) {
             $this->throwValidationException(
                 $request, $validator
             );
+            die();
         }
-//        echo "<hr><pre>";
-//        var_dump($request);
+
         unset($request['_token']);
         $result = Product::create($request);
+        $result = $result->toArray();
+
+        $request['id_product'] = $result['id_product'];
+
+        if($request['category'] == 'laptop')
+            Laptop::create($request);
+        elseif($request['category'] == 'laptop')
+            Book::create($request);
+
         return redirect('/admin/product/add');
     }
 

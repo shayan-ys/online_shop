@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index');
 
 // Authentication routes...
 Route::get('user/login', 'Auth\AuthController@getLogin');
@@ -25,6 +23,7 @@ Route::get('user/register', 'Auth\AuthController@getRegister');
 Route::post('user/register', 'Auth\AuthController@postRegister');
 
 Route::resource('customers', 'CustomerController');
+Route::resource('product', 'ProductController');
 Route::resource('admin', 'AdminController',
     ['only' => ['index','show','product']]);
 
