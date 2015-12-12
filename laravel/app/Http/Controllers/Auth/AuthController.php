@@ -2,6 +2,7 @@
 
 namespace Barad\Http\Controllers\Auth;
 
+use Barad\Http\Requests\Request;
 use Barad\User;
 use Validator;
 use Barad\Http\Controllers\Controller;
@@ -22,6 +23,9 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
+    protected $redirectPath = '/dashboard';
+    protected $loginPath = '/user/login';
 
     /**
      * Create a new authentication controller instance.
