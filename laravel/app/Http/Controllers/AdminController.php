@@ -5,6 +5,7 @@ namespace Barad\Http\Controllers;
 use Barad\Admin;
 use Barad\Book;
 use Barad\Customer;
+use Barad\FileManager;
 use Barad\Laptop;
 use Barad\Product;
 use Illuminate\Http\Request;
@@ -13,6 +14,8 @@ use Barad\Http\Requests;
 use Barad\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Carbon\Carbon;
+use Intervention\Image\Facades\Image;
 use Validator;
 use Input;
 
@@ -62,30 +65,74 @@ class AdminController extends Controller
             default: return self::indexProduct();
         }
     }
-    public function postAddProduct(){
-        $request = Input::all();
-        $validator = Validator::make($request, [
+    public function postAddProduct(Request $request){
+        $inputs = Input::all();
+
+        echo "<pre>";
+        var_dump($inputs);
+        echo "<hr>";
+        echo "<hr>";
+        //die();
+
+        $validator = Validator::make($inputs, [
             'name' => 'required|max:255',
-            'cat'=> 'required'
+            'category'=> 'required'
         ]);
         if ($validator->fails()) {
+            echo "validator failed!";
             $this->throwValidationException(
-                $request, $validator
+                $inputs, $validator
             );
             die();
         }
 
-        unset($request['_token']);
-        $result = Product::create($request);
+        echo "okeye";
+        //die();
+
+        // configure inputs
+        $img_file_id = 0; // no image
+        if($request->hasFile('image')) {
+            $file = Input::file('image');
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+            $filename = $timestamp. '_' .$file->getClientOriginalName();
+            $paths = array(
+                'org'       => public_path().'/uploads/images/originals/',
+                'resized'   => public_path().'/uploads/images/resized/',
+                'small'     => public_path().'/uploads/images/small/'
+            );
+            $file->move($paths['org'], $filename);
+            $img = Image::make($paths['org'].$filename);
+            $img->fit(1150,700);
+            $img->save($paths['resized'].$filename);
+            $img->fit(345,210);
+            $img->save($paths['small'].$filename);
+
+            $fileManager = new FileManager();
+            $fileManager->title = $inputs['name'];
+            $fileManager->desc = $inputs['description'];
+            $fileManager->path_org = $paths['org'].$filename;
+            $fileManager->path_resized = $paths['resized'].$filename;
+            $fileManager->path_small = $paths['small'].$filename;
+            $fileManager->save();
+            $img_file_id = $fileManager->id;
+        }
+
+        //die();
+        unset($inputs['_token']);
+        unset($inputs['image']);
+        $inputs['img_file_id'] = $img_file_id;
+        // end configure inputs
+        $result = Product::create($inputs);
         $result = $result->toArray();
 
-        $request['id_product'] = $result['id_product'];
+        $inputs['id_product'] = $result['id_product'];
 
-        if($request['category'] == 'laptop')
-            Laptop::create($request);
-        elseif($request['category'] == 'laptop')
-            Book::create($request);
+        if($inputs['category'] == 'laptop')
+            Laptop::create($inputs);
+        elseif($inputs['category'] == 'laptop')
+            Book::create($inputs);
 
+        echo "done";
         return redirect('/admin/product/add');
     }
 

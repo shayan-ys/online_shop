@@ -49,3 +49,39 @@ Route::get('dashboard', function(){
     else
         return redirect('/customers');
 });
+
+// Image:
+Route::get('files/image/{id}/{size?}', function($id, $size='resized') {
+    $master_mode = \Illuminate\Support\Facades\File::get(public_path('master_mode.txt'));
+    $keepSize = false;
+    if(strpos($master_mode, "normal") === false) {
+        if(strpos($master_mode, "no_image") !== false)
+            return null;
+        if(strpos($master_mode, "lowres_image") !== false) {
+            if($size=='resized') {
+                $size = "small";
+                $keepSize = "resized";
+            }
+            if($size=='org'){
+                $size = "small";
+                $keepSize = "org";
+            }
+        }
+    }
+//    var_dump(strpos($master_mode, "lowres_image"));
+//    var_dump($keepSize);
+//    die();
+    $define = array(
+        'org'       => 'path_org',
+        'resized'   => 'path_resized',
+        'small'     => 'path_small'
+    );
+    $file = \Barad\FileManager::find($id);
+    $img = Image::make($file->$define[$size]);
+    if($keepSize) {
+        $imgOrg = Image::make($file->$define[$keepSize]);
+        $img->resize($imgOrg->width() , $imgOrg->height());
+    }
+    return $img->response();
+})->where(['id' => '[0-9]+', 'size' => '[a-z]+']);
+// end Image

@@ -23,7 +23,7 @@
                             <div class="content-box-header">
                                 <h3>Product Creating Form</h3>
 
-                                {!!  Form::open(array('action'=>'AdminController@postAddProduct', 'method' => 'post')) !!}
+                                {!!  Form::open(array('action'=>'AdminController@postAddProduct', 'method' => 'post' , 'files'=>true)) !!}
                                     {!! csrf_field() !!}
 
                                 <div class="content-box-large">
@@ -43,7 +43,7 @@
 
                                         <div>
                                             <h4>Product Image</h4>
-                                            <input type="file" name="img_path" />
+                                            {!! Form::file('image') !!}
                                         </div>
 
                                         <div class="laptop">

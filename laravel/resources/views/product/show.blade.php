@@ -87,6 +87,9 @@
                                     echo $body;
                                 ?></small>
                         </h3>
+                        <a href="http://localhost/online_shop/laravel/public/files/image/1/org">
+                            <img src="http://localhost/online_shop/laravel/public/files/image/1" alt="test" title="testtitle" />
+                        </a>
                         <div class="border-four"></div>
 
                         <div class="col-xs-12 col-sm-6">

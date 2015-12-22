@@ -145,9 +145,8 @@ return [
         Barad\Providers\AuthServiceProvider::class,
         Barad\Providers\EventServiceProvider::class,
         Barad\Providers\RouteServiceProvider::class,
-        
-        Way\Generators\GeneratorsServiceProvider::class,
-        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class
+
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -198,7 +197,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
-        'HTML'      => Illuminate\Html\HtmlFacade::class
+        'HTML'      => Illuminate\Html\HtmlFacade::class,
+        'Image'     => Intervention\Image\Facades\Image::class
 
     ],
 
