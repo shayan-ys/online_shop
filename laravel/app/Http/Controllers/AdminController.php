@@ -33,13 +33,11 @@ class AdminController extends Controller
         self::$base_url = asset('/');
         $admin = Auth::user()['original'];
         self::$admin = array('name' => $admin['name']);
-
         if (Auth::check()) {
-            $id_user = Auth::user()->id;
-            $admin_secure = Admin::where('id',$id_user)->where('email', '=', $admin['email'])->where('password', '=', $admin['password'])->first();
+            $admin_secure = Admin::where('email', '=', $admin['email'])->where('password', '=', $admin['password'])->first();
             // He is User but not admin
             if ($admin_secure == null){
-                return redirect('/customers');
+                return redirect('/customer');
             }
         }else{
             Session::put('user_type', 'admin');

@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('welcome');
 });
@@ -50,3 +51,34 @@ Route::get('files/image/{id}/{size?}', function($id, $size='resized') {
     return $img->response();
 })->where(['id' => '[0-9]+', 'size' => '[a-z]+']);
 // end Image
+=======
+Route::get('/', 'IndexController@index');
+
+// Authentication routes...
+Route::get('user/login', 'Auth\AuthController@getLogin');
+Route::post('user/login', 'Auth\AuthController@postLogin');
+Route::get('user/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('user/register', 'Auth\AuthController@getRegister');
+Route::post('user/register', 'Auth\AuthController@postRegister');
+
+Route::resource('customers', 'CustomerController');
+Route::resource('product', 'ProductController');
+Route::get('addBasket', 'BasketController@add');
+Route::get('getBasket', 'BasketController@get');
+Route::get('resetBasket', 'BasketController@reset');
+Route::get('removeBasket', 'BasketController@remove');
+Route::resource('admin', 'AdminController',
+    ['only' => ['index','show','product']]);
+
+Route::get('admin/product/{action}', 'AdminController@product');
+Route::post('admin/product/add', 'AdminController@postAddProduct');
+
+Route::get('dashboard', function(){
+    if( Session::get('user_type')=="admin" )
+        return redirect('/admin');
+    else
+        return redirect('/customer');
+});
+>>>>>>> parent of 675b37e... login logout, search, cart
