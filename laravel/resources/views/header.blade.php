@@ -34,7 +34,7 @@
                     <ul>
                         @if(Auth::check())
                             <li id="userOrLogOut"><a class="user-login" onclick="logout();"><i></i>خروج</a></li>
-                            <li id="registerOrProfile"><a href="<?php  ?>pages/profile.php"><i></i>{{ Auth::user()->name }}</a></li>
+                            <li id="registerOrProfile"><a href="{{ asset('/customers') }}"><i></i>{{ Auth::user()->name }}</a></li>
                         @else
                             <li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
                             <li id="registerOrProfile"><a href="{{ asset('/user/register') }}"><i></i>عضویت</a></li>
