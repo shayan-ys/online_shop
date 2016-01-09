@@ -1,9 +1,0 @@
-var lang_email_invalid = "ايميل را صحيح وارد كنيد"; 
-var lang_website_invalid = "وب سايت را صحيح وارد كنيد"; 
-var lang_username_invalid = "شناسه كاربري را صحيح وارد كنيد"; 
-var lang_password_invalid = "رمز عبور را صحيح وارد كنيد";
-var lang_number_valid_char = "تعداد مجاز کاراکتر";
-var lang_wait = "لطفا صبر كنيد...";
-var lang_upload_butotn = "آپلود";
-var lang_error_upload_valid = 'فايل هاي مجاز را ميتوانيد آپلود كنيد';
-var lang_mobile_invalid = 'موبایل خود را صحیح وارد کنید';

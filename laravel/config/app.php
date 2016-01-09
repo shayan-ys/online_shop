@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost/online_shop/laravel/',
+    'url' => 'http://localhost',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,7 +136,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -196,9 +195,12 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Form'      => Illuminate\Html\FormFacade::class,
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Image'     => Intervention\Image\Facades\Image::class
+=======
+>>>>>>> parent of 68d1f4c... Merge pull request #2 from shayan-ys/development
 
     ],
 
